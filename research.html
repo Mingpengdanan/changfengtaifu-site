@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球科研动态 · 长风泰富</title>
+<meta name="description" content="长风泰富追踪全球顶尖高校与 AI 实验室的最新研究动态、论文与方向">
+<meta name="keywords" content="长风泰富,科研动态,AI实验室,人工智能论文,AI研究方向,智算,大模型,AI系统">
+<meta name="author" content="北京长风泰富科技有限公司">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0ea96a">
+<link rel="canonical" href="https://www.changfengtaifu.com/research.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="长风泰富">
+<meta property="og:title" content="全球科研动态 · 长风泰富">
+<meta property="og:description" content="追踪全球顶尖高校与 AI 实验室的最新研究动态、论文成果与实验室方向。">
+<meta property="og:url" content="https://www.changfengtaifu.com/research.html">
+<meta property="og:image" content="https://www.changfengtaifu.com/assets/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="全球科研动态 · 长风泰富">
+<meta name="twitter:description" content="追踪全球顶尖高校与 AI 实验室的最新研究动态、论文成果与实验室方向。">
+<meta name="twitter:image" content="https://www.changfengtaifu.com/assets/og-cover.jpg">
+<style>
+:root{
+  --bg:#eef7f3; --surface:#ffffff; --surface2:#f2fbf7;
+  --cyan:#0ea5e9; --blue:#0ea96a; --grad:linear-gradient(90deg,#0ea96a,#0ea5e9);
+  --ink:#0e2038; --text:#46586f; --mute:#64748b; --faint:#94a3b8;
+  --line:rgba(20,55,100,.12); --shadow:0 18px 44px rgba(20,50,100,.10);
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.tag{font-family:"SF Mono","SFMono-Regular",ui-monospace,Menlo,monospace;
+  font-size:12px;letter-spacing:.22em;color:var(--blue);text-transform:uppercase}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* NAV */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);box-shadow:0 4px 24px rgba(20,50,100,.05)}
+nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:42px;height:42px}
+.brand b{font-size:17px;font-weight:700;color:var(--ink)}
+.brand span{display:block;font-size:10px;color:var(--mute);letter-spacing:.14em}
+.navlinks{display:flex;gap:28px;align-items:center}
+.navlinks a{font-size:15px;color:var(--text);transition:.2s;position:relative}
+.navlinks a.active{color:var(--blue);font-weight:600}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--grad);transition:.25s}
+.navlinks a:hover::after,.navlinks a.active::after{width:100%}
+.btn-nav{display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:40px;font-size:14px;
+  font-weight:600;background:var(--grad);color:#fff;border:none;cursor:pointer}
+.navlinks .btn-nav,.navlinks .btn-nav:hover{color:#fff}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.burger span{width:26px;height:2px;background:var(--ink);transition:.3s}
+
+/* HERO */
+.hero{padding:110px 0 60px;background:radial-gradient(900px 500px at 70% 0,rgba(14,165,233,.14),transparent 60%),
+  radial-gradient(700px 500px at 0 100%,rgba(14,169,106,.10),transparent 60%),
+  linear-gradient(160deg,#fff,#ecf7f3 60%,#e6f4ed)}
+.hero-inner{padding-top:30px}
+.hero .tag{display:inline-block;margin-bottom:18px}
+.hero h1{font-size:clamp(32px,5vw,58px);font-weight:800;line-height:1.15;color:var(--ink)}
+.hero .sub{color:var(--mute);font-size:16px;margin-top:12px;max-width:600px}
+.hero-meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px}
+.meta-chip{background:var(--surface);border:1px solid var(--line);border-radius:30px;padding:8px 18px;
+  font-size:14px;color:var(--text);display:flex;align-items:center;gap:7px;box-shadow:var(--shadow)}
+.meta-chip b{color:var(--blue)}
+
+/* SECTIONS */
+section{padding:80px 0}
+.sec-head{max-width:700px;margin:0 auto 50px;text-align:center}
+.sec-head .tag{display:inline-block;margin-bottom:12px}
+.sec-head h2{font-size:clamp(26px,3.5vw,38px);font-weight:800;color:var(--ink)}
+.sec-head .en{font-size:14px;color:var(--faint);letter-spacing:.1em;margin-top:6px}
+.sec-head p{color:var(--mute);margin-top:14px;font-size:15px}
+
+/* DIRECTIONS */
+#directions{background:linear-gradient(180deg,#fff,#f1faf6)}
+.dir-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dir-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 24px;
+  transition:.3s;box-shadow:var(--shadow)}
+.dir-card:hover{transform:translateY(-6px);border-color:rgba(14,165,233,.4);box-shadow:0 24px 50px rgba(20,50,100,.14)}
+.dir-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+.dir-icon{font-size:28px;line-height:1;flex-shrink:0;margin-top:2px}
+.dir-head h3{font-size:17px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.dir-en{font-size:12px;color:var(--faint);letter-spacing:.06em;margin-top:3px}
+.dir-tag{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600;letter-spacing:.05em}
+.labs{display:flex;flex-direction:column;gap:10px}
+.lab-item{display:flex;flex-direction:column;gap:2px}
+.lab-item a{font-size:14px;font-weight:600;color:var(--blue);transition:.15s}
+.lab-item a:hover{color:var(--cyan)}
+.lab-item span{font-size:12.5px;color:var(--mute)}
+
+/* RSS / LAB NEWS */
+#lab-news{background:var(--bg)}
+.lab-section{background:var(--surface);border:1px solid var(--line);border-radius:18px;margin-bottom:22px;
+  overflow:hidden;box-shadow:var(--shadow)}
+.lab-hdr{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+  padding:18px 22px;background:var(--surface2)}
+.lab-info{display:flex;align-items:center;gap:10px}
+.lab-flag{font-size:20px}
+.lab-info b{font-size:16px;font-weight:700;color:var(--ink);display:block}
+.lab-org{font-size:12px;color:var(--mute)}
+.lab-focus{font-size:12px;color:var(--blue);background:rgba(14,169,106,.08);padding:4px 10px;border-radius:20px}
+.news-list{padding:6px 0}
+.news-item{display:flex;flex-direction:column;gap:4px;padding:14px 22px;border-bottom:1px solid var(--line);
+  transition:.2s;cursor:pointer}
+.news-item:last-child{border-bottom:none}
+.news-item:hover{background:var(--surface2)}
+.ni-date{font-size:11.5px;color:var(--faint);font-family:"Helvetica Neue",Arial}
+.ni-title{font-size:15px;font-weight:600;color:var(--ink);line-height:1.4}
+.ni-summary{font-size:13px;color:var(--mute);margin-top:2px}
+
+/* ARXIV */
+#arxiv-papers{background:linear-gradient(180deg,#f1faf6,#eef7f3)}
+.arxiv-cat-label{font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.2em;
+  color:var(--blue);text-transform:uppercase;margin:28px 0 12px;padding-left:4px}
+.paper-card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:20px 22px;margin-bottom:12px;transition:.25s;box-shadow:var(--shadow)}
+.paper-card:hover{border-color:rgba(14,165,233,.4);transform:translateX(4px);background:var(--surface2)}
+.paper-meta{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+.paper-org{font-size:12px;font-weight:600;padding:2px 8px;border-radius:8px;
+  background:rgba(14,169,106,.10);color:var(--blue)}
+.paper-date{font-size:12px;color:var(--faint)}
+.paper-title{font-size:15px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:6px}
+.paper-abs{font-size:13px;color:var(--mute);line-height:1.55}
+
+/* PAPERS WITH CODE */
+#trending-papers{background:var(--bg)}
+.pwc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pwc-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;
+  transition:.3s;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+.pwc-card:hover{transform:translateY(-5px);border-color:rgba(14,165,233,.4);box-shadow:0 22px 48px rgba(20,50,100,.14)}
+.pwc-top{display:flex;justify-content:space-between;align-items:center}
+.pwc-stars{font-size:12px;color:#f59e0b;font-weight:600}
+.pwc-date{font-size:12px;color:var(--faint)}
+.pwc-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4}
+.pwc-tasks{font-size:12px;color:var(--cyan)}
+.pwc-abs{font-size:12.5px;color:var(--mute);line-height:1.5}
+
+/* FOOTER */
+footer{background:#e8f4ee;border-top:1px solid var(--line);padding:50px 0 30px}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+.foot-brand{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.foot-brand img{width:40px;height:40px}
+.foot-brand b{font-size:17px;color:var(--ink)}
+.foot-brand span{display:block;font-size:11px;color:var(--faint);letter-spacing:.12em}
+.foot-c{font-size:14px;color:var(--text);max-width:380px}
+.foot-links h5{font-size:13px;color:var(--blue);letter-spacing:.1em;margin-bottom:12px}
+.foot-links a{display:block;color:var(--mute);font-size:14px;margin-bottom:8px;transition:.2s}
+.foot-links a:hover{color:var(--ink)}
+.copy{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);display:flex;
+  justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--faint);font-size:12.5px}
+
+@media(max-width:900px){
+  .dir-grid,.pwc-grid{grid-template-columns:1fr 1fr}
+  .navlinks{position:fixed;top:74px;right:0;height:calc(100vh - 74px);width:72%;max-width:300px;
+    background:rgba(255,255,255,.98);backdrop-filter:blur(16px);flex-direction:column;gap:0;padding:16px 0;
+    transform:translateX(100%);transition:.35s;border-left:1px solid var(--line)}
+  .navlinks.open{transform:none}
+  .navlinks a{width:100%;padding:16px 28px;font-size:16px;border-bottom:1px solid var(--line)}
+  .navlinks .btn-nav{margin:16px 28px}
+  .burger{display:flex}
+}
+@media(max-width:560px){.dir-grid,.pwc-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="长风泰富">
+        <div><b>长风泰富</b><span>CHANGFENG TAIFU</span></div>
+      </a>
+      <div class="navlinks" id="menu">
+        <a href="index.html#about">关于我们</a>
+        <a href="index.html#services">核心业务</a>
+        <a href="index.html#infra">智算基础设施</a>
+        <a href="news.html">AI 资讯</a>
+        <a href="research.html" class="active">科研动态</a>
+        <a href="careers.html">加入我们</a>
+        <a href="index.html#contact" class="btn-nav">联系我们</a>
+      </div>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="tag">Global Research Tracker</span>
+    <h1>全球<span class="grad-text">顶尖实验室</span>科研动态</h1>
+    <div class="sub">追踪 MIT · Stanford · Berkeley · CMU · DeepMind 等全球顶尖高校与 AI 机构的最新研究方向、论文成果与实验室动态</div>
+    <div class="hero-meta">
+      <div class="meta-chip">🕐 最近更新 <b>2026-06-10 22:14</b></div>
+      <div class="meta-chip">📡 RSS 动态 <b>56 条</b></div>
+      <div class="meta-chip">📄 arXiv 论文 <b>0 篇</b></div>
+      <div class="meta-chip">🇨🇳 国内机构 <b>8 家</b></div>
+      <div class="meta-chip">🌍 全球机构 <b>10 家</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 研究方向总览 -->
+<section id="directions">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">Research Directions</span>
+      <h2>顶尖实验室研究方向</h2>
+      <div class="en">Global Top Lab Directory</div>
+      <p>精选全球 AI / CS 领域前沿实验室，覆盖大模型、高效推理、具身智能、AI4Science 等核心方向</p>
+    </div>
+    <div class="dir-grid">
+      
+        <div class="dir-card reveal">
+          <div class="dir-head">
+            <span class="dir-icon">💬</span>
+            <div>
+              <h3>大语言模型与 Agent<span class="dir-tag" style="background:#0ea96a20;color:#0ea96a">热门</span></h3>
+              <div class="dir-en">LLM &amp; AI Agents</div>
+            </div>
+          </div>
+          <div class="labs"><div class="lab-item"><a href="https://nlp.stanford.edu" target="_blank" rel="noopener"><b>Stanford NLP Group</b></a><span>大模型对齐、知识推理、对话系统</span></div><div class="lab-item"><a href="https://nlp.cs.princeton.edu" target="_blank" rel="noopener"><b>Princeton NLP</b></a><span>LLM 评估、安全性、语言理解生成</span></div><div class="lab-item"><a href="https://bair.berkeley.edu" target="_blank" rel="noopener"><b>Berkeley BAIR</b></a><span>强化学习、多模态 Agent、规划</span></div><div class="lab-item"><a href="https://www.lti.cs.cmu.edu" target="_blank" rel="noopener"><b>CMU Language Technology</b></a><span>多语言、低资源、对话系统</span></div></div>
+        </div>
+
+        <div class="dir-card reveal">
+          <div class="dir-head">
+            <span class="dir-icon">⚡</span>
+            <div>
+              <h3>高效推理与模型压缩<span class="dir-tag" style="background:#0ea5e920;color:#0ea5e9">核心</span></h3>
+              <div class="dir-en">Efficient Inference &amp; Compression</div>
+            </div>
+          </div>
+          <div class="labs"><div class="lab-item"><a href="https://hanlab.mit.edu" target="_blank" rel="noopener"><b>MIT Han Lab</b></a><span>量化、剪枝、蒸馏、神经架构搜索 (NAS)</span></div><div class="lab-item"><a href="https://mlsys.stanford.edu" target="_blank" rel="noopener"><b>Stanford MLSys</b></a><span>ML 系统优化、分布式训练、推理加速</span></div><div class="lab-item"><a href="https://sky.cs.berkeley.edu" target="_blank" rel="noopener"><b>Berkeley Sky Lab</b></a><span>云际计算、跨云 AI 调度</span></div></div>
+        </div>
+
+        <div class="dir-card reveal">
+          <div class="dir-head">
+            <span class="dir-icon">🔬</span>
+            <div>
+              <h3>AI for Science<span class="dir-tag" style="background:#c026d320;color:#c026d3">前沿</span></h3>
+              <div class="dir-en">AI for Science</div>
+            </div>
+          </div>
+          <div class="labs"><div class="lab-item"><a href="https://deepmind.google" target="_blank" rel="noopener"><b>Google DeepMind Science</b></a><span>蛋白质结构预测、数学推理、气候模型</span></div><div class="lab-item"><a href="https://aimi.stanford.edu" target="_blank" rel="noopener"><b>Stanford AIMI</b></a><span>医学影像、临床决策支持</span></div><div class="lab-item"><a href="https://www.csail.mit.edu" target="_blank" rel="noopener"><b>MIT CSAIL</b></a><span>基因组学、药物发现、生物计算</span></div></div>
+        </div>
+
+        <div class="dir-card reveal">
+          <div class="dir-head">
+            <span class="dir-icon">🦾</span>
+            <div>
+              <h3>具身智能与机器人<span class="dir-tag" style="background:#c026d320;color:#c026d3">前沿</span></h3>
+              <div class="dir-en">Embodied AI &amp; Robotics</div>
+            </div>
+          </div>
+          <div class="labs"><div class="lab-item"><a href="https://rll.berkeley.edu" target="_blank" rel="noopener"><b>Berkeley RLL</b></a><span>机器人学习、抓取与操作</span></div><div class="lab-item"><a href="https://www.ri.cmu.edu" target="_blank" rel="noopener"><b>CMU Robotics Institute</b></a><span>自主移动、人机协作、感知</span></div><div class="lab-item"><a href="https://robotics.stanford.edu" target="_blank" rel="noopener"><b>Stanford Robotics</b></a><span>灵巧手操作、强化学习</span></div></div>
+        </div>
+
+        <div class="dir-card reveal">
+          <div class="dir-head">
+            <span class="dir-icon">🖥️</span>
+            <div>
+              <h3>AI 系统与算力调度<span class="dir-tag" style="background:#0ea5e920;color:#0ea5e9">核心</span></h3>
+              <div class="dir-en">AI Systems &amp; HPC</div>
+            </div>
+          </div>
+          <div class="labs"><div class="lab-item"><a href="https://sky.cs.berkeley.edu" target="_blank" rel="noopener"><b>Berkeley Sky Computing</b></a><span>跨云调度、算力互联、低延迟</span></div><div class="lab-item"><a href="https://dawn.cs.stanford.edu" target="_blank" rel="noopener"><b>Stanford DAWN</b></a><span>AI-数据库融合、高效系统</span></div><div class="lab-item"><a href="https://www.pdl.cmu.edu" target="_blank" rel="noopener"><b>CMU PDL</b></a><span>分布式存储、数据中心体系结构</span></div></div>
+        </div>
+
+        <div class="dir-card reveal">
+          <div class="dir-head">
+            <span class="dir-icon">🌱</span>
+            <div>
+              <h3>绿色 AI 与可持续计算<span class="dir-tag" style="background:#f59e0b20;color:#f59e0b">方向</span></h3>
+              <div class="dir-en">Green AI &amp; Sustainable Computing</div>
+            </div>
+          </div>
+          <div class="labs"><div class="lab-item"><a href="https://energy.mit.edu" target="_blank" rel="noopener"><b>MIT Energy Initiative</b></a><span>能源效率优化、绿色数据中心设计</span></div><div class="lab-item"><a href="https://ethz.ch/en/research" target="_blank" rel="noopener"><b>ETH Zurich Computing</b></a><span>低功耗 AI 芯片、算法-硬件协同设计</span></div></div>
+        </div>
+
+        <div class="dir-card reveal">
+          <div class="dir-head">
+            <span class="dir-icon">🏛️</span>
+            <div>
+              <h3>中国顶尖高校 AI 实验室<span class="dir-tag" style="background:#64748b20;color:#64748b">国内</span></h3>
+              <div class="dir-en">China&#x27;s Top University Labs</div>
+            </div>
+          </div>
+          <div class="labs"><div class="lab-item"><a href="https://air.tsinghua.edu.cn" target="_blank" rel="noopener"><b>清华大学 AIR</b></a><span>面向产业的 AI 研究、大模型、具身智能</span></div><div class="lab-item"><a href="https://nlp.csai.tsinghua.edu.cn" target="_blank" rel="noopener"><b>清华大学 THML</b></a><span>NLP、知识图谱、推理与对话</span></div><div class="lab-item"><a href="https://www.ai.pku.edu.cn" target="_blank" rel="noopener"><b>北京大学 AI 研究院</b></a><span>视觉-语言多模态、智能系统</span></div><div class="lab-item"><a href="https://apex.sjtu.edu.cn" target="_blank" rel="noopener"><b>上海交大 APEX Lab</b></a><span>数据挖掘、推荐系统、LLM 应用</span></div><div class="lab-item"><a href="https://www.cad.zju.edu.cn" target="_blank" rel="noopener"><b>浙江大学 CAD&amp;CG 国重</b></a><span>计算机图形、3D 视觉、数字人</span></div><div class="lab-item"><a href="https://nlp.fudan.edu.cn" target="_blank" rel="noopener"><b>复旦大学 FudanNLP</b></a><span>NLP、语义理解、医疗 AI</span></div></div>
+        </div>
+
+        <div class="dir-card reveal">
+          <div class="dir-head">
+            <span class="dir-icon">🔭</span>
+            <div>
+              <h3>中国科研机构与 AI 实验室<span class="dir-tag" style="background:#64748b20;color:#64748b">国内</span></h3>
+              <div class="dir-en">China&#x27;s Research Institutes &amp; AI Labs</div>
+            </div>
+          </div>
+          <div class="labs"><div class="lab-item"><a href="https://www.shlab.org.cn" target="_blank" rel="noopener"><b>上海人工智能实验室</b></a><span>书生·浦语 InternLM · 多模态 · 开源生态</span></div><div class="lab-item"><a href="https://www.baai.ac.cn" target="_blank" rel="noopener"><b>智源研究院 BAAI</b></a><span>悟道大模型 · FlagAI · AI 评测基准</span></div><div class="lab-item"><a href="https://www.zhejianglab.org" target="_blank" rel="noopener"><b>之江实验室</b></a><span>脑机接口 · 人机协同 · 超算基础设施</span></div><div class="lab-item"><a href="http://www.ia.cas.cn" target="_blank" rel="noopener"><b>中科院自动化所</b></a><span>模式识别 · 计算机视觉 · 脑科学</span></div><div class="lab-item"><a href="https://www.pcl.ac.cn" target="_blank" rel="noopener"><b>鹏城实验室</b></a><span>鹏城云脑 · 开源 AI 基础设施</span></div></div>
+        </div>
+
+        <div class="dir-card reveal">
+          <div class="dir-head">
+            <span class="dir-icon">🚀</span>
+            <div>
+              <h3>中国头部 AI 企业研究院<span class="dir-tag" style="background:#64748b20;color:#64748b">国内</span></h3>
+              <div class="dir-en">China&#x27;s Top AI Company Labs</div>
+            </div>
+          </div>
+          <div class="labs"><div class="lab-item"><a href="https://www.deepseek.com" target="_blank" rel="noopener"><b>DeepSeek 深度求索</b></a><span>DeepSeek-R1/V3 · MoE 架构 · 低成本高效训练</span></div><div class="lab-item"><a href="https://zhipuai.cn" target="_blank" rel="noopener"><b>智谱 AI</b></a><span>GLM 系列 · ChatGLM · Agent · 视频生成</span></div><div class="lab-item"><a href="https://research.baidu.com" target="_blank" rel="noopener"><b>百度研究院</b></a><span>文心大模型 · 飞桨 PaddlePaddle · 自动驾驶</span></div><div class="lab-item"><a href="https://damo.alibaba.com" target="_blank" rel="noopener"><b>阿里达摩院</b></a><span>通义千问 Qwen · 多模态 · 云端 AI</span></div><div class="lab-item"><a href="https://huaweinoah.github.io" target="_blank" rel="noopener"><b>华为诺亚方舟实验室</b></a><span>盘古大模型 · 昇腾 NPU · 联邦学习</span></div><div class="lab-item"><a href="https://seed.bytedance.com" target="_blank" rel="noopener"><b>字节跳动 Seed</b></a><span>Doubao · 视频生成 · 多模态理解</span></div><div class="lab-item"><a href="https://www.moonshot.cn" target="_blank" rel="noopener"><b>月之暗面 Moonshot AI</b></a><span>Kimi · 超长上下文 · Reasoning</span></div><div class="lab-item"><a href="https://www.minimaxi.com" target="_blank" rel="noopener"><b>MiniMax</b></a><span>语音合成 · 视频生成 · Agent 框架</span></div></div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- 中国境内 AI 动态 -->
+<section id="cn-news" style="background:linear-gradient(180deg,#fff,#f0f7ff)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">🇨🇳 China AI Updates</span>
+      <h2>中国境内 AI 动态</h2>
+      <div class="en">Domestic Research Institutes · Enterprise Labs · Media</div>
+      <p>覆盖上海 AI Lab · 智源 BAAI · DeepSeek · 智谱 · 百度 · 达摩院 · 机器之心 · 量子位等机构与媒体</p>
+    </div>
+    
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #E63946">
+          <div class="lab-info">
+            <span class="lab-flag">🇨🇳</span>
+            <div>
+              <b>量子位 QbitAI</b>
+              <span class="lab-org">量子位</span>
+            </div>
+          </div>
+          <span class="lab-focus">AI 创业 · 产业动态 · 模型评测 · 政策解读</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://www.qbitai.com/2026/06/434267.html" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 11 Ju</div>
+            <div class="ni-title">谷歌I/O最出圈的一幕，发生在抖音？？？</div>
+            <div class="ni-summary">看12位抖音创作者如何”翻译“AI</div>
+          </a>
+          <a class="news-item" href="https://www.qbitai.com/2026/06/434268.html" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 11 Ju</div>
+            <div class="ni-title">行业首创AI志愿填报+真人专家验真，百度全新升级高考服务</div>
+            <div class="ni-summary">全新的AI志愿报告</div>
+          </a>
+          <a class="news-item" href="https://www.qbitai.com/2026/06/434225.html" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 11 Ju</div>
+            <div class="ni-title">实测小米最快1T大模型：吞吐量每秒1000+ Tokens，Vibe Coding七秒交付</div>
+            <div class="ni-summary">通用GPU就能实现</div>
+          </a>
+          <a class="news-item" href="https://www.qbitai.com/2026/06/434196.html" target="_blank" rel="noopener">
+            <div class="ni-date">Wed, 10 Ju</div>
+            <div class="ni-title">中国第一、全球第二！HiDream-O1-Image-1.5 登顶文生图榜单，超越谷歌、英伟达</div>
+            <div class="ni-summary">转载来源：智象未来
+本文为量子位获授权转载，观点仅为原作者所有。</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #F97316">
+          <div class="lab-info">
+            <span class="lab-flag">🇨🇳</span>
+            <div>
+              <b>雷峰网</b>
+              <span class="lab-org">雷峰网 AI 媒体</span>
+            </div>
+          </div>
+          <span class="lab-focus">AI 硬件 · 大模型落地 · 智能驾驶 · 算力</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://www.leiphone.com/category/ai/6WL1SBqJQM2LVl94.html" target="_blank" rel="noopener">
+            <div class="ni-date">Wed, 10 Ju</div>
+            <div class="ni-title">会写字、懂排版、能分镜：HiDream-O1-Image-1.5 全能图像生成能力解析</div>
+            <div class="ni-summary">近日，智象未来（HiDream.ai） 全新推出的商用版图像生成模型 HiDream-O1-Image-1.5 再次实现 SOTA，在全球知名独立 AI 模型评测与分析平台 Artificial Analysis的文生图榜单（Text to Image Leaderboard）上，一举登上中国图像生成模型第一，成为评分仅次于OpenAI的中国大模型公司，超越Google Nano Banana 2（Gemini 3.1 Flash Im</div>
+          </a>
+          <a class="news-item" href="https://www.leiphone.com/category/zaobao/920O0mJxY30OIE6r.html" target="_blank" rel="noopener">
+            <div class="ni-date">Wed, 10 Ju</div>
+            <div class="ni-title">离谱！哈啰单车员工曾计划殴打竞品核心人员，公司回应；员工「迟开电脑8分钟」被开除，法院判了；丰巢取件得先看广告，客服称暂无法关闭</div>
+            <div class="ni-summary">要闻提示1.离谱！曝哈啰单车员工曾计划殴打竞品核心人员，公司回应2.网友称早晚双脚投票？丰巢取件得先看广告，客服：暂无法关闭3.员工因“迟开电脑8分钟、和同事说话4分钟”被当场开除！法院：公司违法，赔偿10.8万元4.阿维塔称被抄袭：中国汽车不能走Ctrl+C、Ctrl+V之路5.App开屏广告比牛皮癣还烦人，摇一摇就跳转！多平台回应：无法取消开屏广告6.赛力斯赛豆科技正式发布！品牌Logo亮相7.离谱操作！Meta智能眼镜暗藏人脸识别</div>
+          </a>
+          <a class="news-item" href="https://www.leiphone.com/category/industrynews/g1yZBjmsWQ6XRHdJ.html" target="_blank" rel="noopener">
+            <div class="ni-date">Wed, 10 Ju</div>
+            <div class="ni-title">火山引擎与周星驰比高集团达成版权合作，打造AI 视频 IP 合作新模式</div>
+            <div class="ni-summary">6月10日，火山方舟版权商业化平台正式上线，周星驰旗下比高集团携《喜剧之王》《长江七号》《食神》三大经典影视&amp;nbsp;IP&amp;nbsp;率先入驻，双方达成&amp;nbsp;AI&amp;nbsp;视频创作版权合作。火山方舟版权商业化平台依托全球领先的&amp;nbsp;Seedance 2.0&amp;nbsp;视频生成模型及完备的版权治理体系，推出业内首个「授权&amp;nbsp;—&amp;nbsp;保护&amp;nbsp;—&amp;nbsp;审核&amp;nbsp;—&amp;nbsp;分发&amp;nbsp;—</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #16A34A">
+          <div class="lab-info">
+            <span class="lab-flag">🇨🇳</span>
+            <div>
+              <b>36氪 · AI 动态</b>
+              <span class="lab-org">36氪</span>
+            </div>
+          </div>
+          <span class="lab-focus">AI 创业融资 · 科技产业 · 政策资讯</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://36kr.com/p/3848188076381187?f=rss" target="_blank" rel="noopener">
+            <div class="ni-date">2026-06-11</div>
+            <div class="ni-title">浪往南走：今年盛夏，WAVES来到番禺</div>
+            <div class="ni-summary">浪来了，你到不到？
+  
+  WAVES是36氪每年夏天最重要的一场会。
+  但它不仅仅是一个“会”。
+  从2023年北京金海湖碧波岛的草坪，到2024年郎园Station的市集，到2025年良渚五千年的夜空下——WAVES每年都在找一个地方，把36岁以下最值得关注的创业者和投资人放在同一个空间里。没有红毯，没有礼服，没有人念稿。白天是圆桌和碰撞，晚上是脱口秀、AI集市和珠江边的清风。
+  今年盛夏，WAVES第一次来到珠</div>
+          </a>
+          <a class="news-item" href="https://36kr.com/p/3846956646124036?f=rss" target="_blank" rel="noopener">
+            <div class="ni-date">2026-06-10</div>
+            <div class="ni-title">独家｜字节 AI 制药开启拆分融资，AI4S 进入产业化阶段</div>
+            <div class="ni-summary">文｜周鑫雨
+  编辑｜张雨忻
+  《智能涌现》独家获悉，字节跳动 AI 制药业务线已启动拆分与独立融资进程。
+  据悉，拆分后字节仍将控股新公司，AI 制药核心团队、核心算法、技术平台和已有管线资产将整体进入新主体。同时，该业务也将继续从火山引擎获得算力支持。
+  新公司将由字节跳动 AI 制药团队主导负责。字节 AI 制药团队成立于 2021 年，由刘凯负责，据悉核心成员约50人，由 AI4S 算法人才和资深制药领域专家构成。该团队自</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #7C3AED">
+          <div class="lab-info">
+            <span class="lab-flag">🇨🇳</span>
+            <div>
+              <b>InfoQ 中文站</b>
+              <span class="lab-org">InfoQ</span>
+            </div>
+          </div>
+          <span class="lab-focus">技术深度 · 架构设计 · ML 工程 · 开源实践</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://www.infoq.cn/article/xsPR0sTxb7ItV6J9JHcJ?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 11 Ju</div>
+            <div class="ni-title">推荐系统进入“大模型时刻”：昇腾NPU如何支撑千亿级生成式推荐落地</div>
+            <div class="ni-summary">点击查看原文&gt;</div>
+          </a>
+          <a class="news-item" href="https://www.infoq.cn/article/ouEuzmbM0dXLfO0pbNpt?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 11 Ju</div>
+            <div class="ni-title">Omni Cache：以内存为中心的KV管理与推理加速｜AICon上海</div>
+            <div class="ni-summary">点击查看原文&gt;</div>
+          </a>
+          <a class="news-item" href="https://www.infoq.cn/article/P3C52z1QFIgM0oBSIiXO?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener">
+            <div class="ni-date">Wed, 10 Ju</div>
+            <div class="ni-title">OpenAI 为 Codex 智能体打造安全的 Windows 沙盒</div>
+            <div class="ni-summary">点击查看原文&gt;</div>
+          </a>
+          <a class="news-item" href="https://www.infoq.cn/article/W3cHyeWfH0fbisevdoK6?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener">
+            <div class="ni-date">Wed, 10 Ju</div>
+            <div class="ni-title">大人，AI编程又变天了！Claude Code之父、龙虾创始人同时力捧新范式，杀死提示词工程？</div>
+            <div class="ni-summary">点击查看原文&gt;</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #0070F3">
+          <div class="lab-info">
+            <span class="lab-flag">🇨🇳</span>
+            <div>
+              <b>机器之心</b>
+              <span class="lab-org">Synced · 机器之心</span>
+            </div>
+          </div>
+          <span class="lab-focus">AI 技术解读 · 学术前沿 · 行业动态</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKo1ZuyWdsiyFXQm8hx1iYIrFqXa8Fplpd96W-voCf0SI2BU-KvIRjeqmkvAqmdrQQL3W-CuiGHX9XTkF0R7PM1hKfURgY_Dmt6npPqxUnQKPo_MzHVsIxXEYMiFb0d8bnXLC9DWZvDoJp_hFEYyy1eEPP3xT-sIJ_XZt3D185Ni7rGPvEkFaki_7rxd-QEtxoUBU8pCc0WV89FH6In5Ei3zg..&amp;type=2&amp;query=almosthuman2014&amp;token=6E3A468B4B7935825E580DAE769F95455E644EC36A2A3FC8" target="_blank" rel="noopener">
+            <div class="ni-date">Mon, 23 Oc</div>
+            <div class="ni-title">口型几乎完美、还能卡点,霉霉说地道中文的视频火了,背后AI工具原来是它</div>
+            <div class="ni-summary">在视频里,霉霉操着一口流利、地道的中文,神情自若,几乎没有早期译制片女主角的那种腔调,口型也能对得上.图源:微博 @会火...</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #0891B2">
+          <div class="lab-info">
+            <span class="lab-flag">🇨🇳</span>
+            <div>
+              <b>月之暗面 Kimi</b>
+              <span class="lab-org">Moonshot AI</span>
+            </div>
+          </div>
+          <span class="lab-focus">Kimi · 超长上下文 · Reasoning</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKogUcifuvQtLrQm8hx1iYIrFqXa8Fplpd9ViJNunAg06jEutALd4Ic4LZJM87KPiOTxLMUNpDb_2O8ZjvNe6GEceGiVLJWKn16o9yw93u31jSBAaudcRmQBArbzFTrp35uoOx8FtVd9f2ByeIQy27PGOHZc9Y8aAlWQR-S9D1zbBfLMyQH60YbKjOAbnGIMYtajmx0DORnNNGFW6cwuUnkdA..&amp;type=2&amp;query=MoonshotAI&amp;token=6E3AEF7697A5E95E8284D172AF0AD0F982EA4E546A2A3FE6" target="_blank" rel="noopener">
+            <div class="ni-date">Fri, 27 Ma</div>
+            <div class="ni-title">月之暗面MoonshotAI正筹备赴港IPO!月之暗面Kimi概念最正宗的8家公司</div>
+            <div class="ni-summary">据媒体消息,月之暗面MoonshotAI正筹备赴港IPO,其旗舰产品Kimi聊天机器人已发布升级版K2.5,实现多模态统一处理能力.在全球...</div>
+          </a>
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKogUcifuvQtLrQm8hx1iYIrFqXa8Fplpd9WSm4IVMcQRrdF7949GQgdxg7Whe20M3cNNMpLAQSUtv8M3mifUnQGfu8qEFrP5afs_Ghrx8LXb25mualZ7dAjUFf8_huan9swmbt3aRcvyXirvLRjqh32J2fgcka6VG4Sgj8vRwFqRJsdNwbIuXAL8gbDK3MI_1cOcoimOR0o2k5eBgmN3LoYQ..&amp;type=2&amp;query=MoonshotAI&amp;token=6E3AEF7697A5E95E8284D172AF0AD0F982EA4E546A2A3FE6" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 19 Ma</div>
+            <div class="ni-title">惊人反转:Moonshot AI提出“注意力残差”,大模型深度困境迎来破局者</div>
+            <div class="ni-summary">//github.com/MoonshotAI/Attention-Residuals这篇文章要解决的行业核心痛点非常明确:当前所有大模型(从GPT到Llama,从...</div>
+          </a>
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKogUcifuvQtLrQm8hx1iYIrFqXa8Fplpd94XJ3HEBuq4BcQK6_w_Xw__z81mkg7YngNDoRjKMeSNxxbM8o-Gn_bSpAQymSeUqt0fFJS0EOkccgDEG6LE3-ryyPXlyJvUp-QRNjEXzIpyDjBCoGeHqZfMB4SHthaOCl3kcScYWqzZNjiUZBuKabDGOM-N8V71j5BmxKZMfQdK5f_71bqkOtiw..&amp;type=2&amp;query=MoonshotAI&amp;token=6E3AEF7697A5E95E8284D172AF0AD0F982EA4E546A2A3FE6" target="_blank" rel="noopener">
+            <div class="ni-date">Mon, 16 Ma</div>
+            <div class="ni-title">Kimi K2.5 深度技术解析:原生多模态 Agent 大模型的架构与实现</div>
+            <div class="ni-summary">\    --model moonshotai/Kimi-K2.5 \    --tensor-parallel-size 8 \    --max-model-len 262144 \    --quantization awq \    --port 8000参数说明:-...</div>
+          </a>
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKogUcifuvQtLrQm8hx1iYIrFqXa8Fplpd9KMrlObvWqya5MveQcmezszf-lQc0VSdqKxGKCxoYaGF059rG-Q6jGX6dWJ26mNkpI7xMVI_K5GxS1bS6LHEtaHzj6E1ZdeI-0fZW_HLM1lyilcC16HALnk1C_d2E6WJZbm9SQ_l8ULAKig2lMLb4xRFraVC0sPbXtFb6agY8I7TYl_Q5RRZQjg..&amp;type=2&amp;query=MoonshotAI&amp;token=6E3AEF7697A5E95E8284D172AF0AD0F982EA4E546A2A3FE6" target="_blank" rel="noopener">
+            <div class="ni-date">Fri, 30 Ja</div>
+            <div class="ni-title">NVIDIA杀疯了!免费开放GLM-4.7、Minimax-M2.1、Kimi-k2.5(附教程)</div>
+            <div class="ni-summary">moonshotai/kimi-k2.5＂,    messages=[        {＂role＂: ＂system＂, ＂content＂: ＂你是一个专业的文档分析助手＂},        {＂role＂: ...</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #0A66C2">
+          <div class="lab-info">
+            <span class="lab-flag">🇨🇳</span>
+            <div>
+              <b>DeepSeek 资讯</b>
+              <span class="lab-org">DeepSeek 生态</span>
+            </div>
+          </div>
+          <span class="lab-focus">DeepSeek R1/V3 · MoE · 开源大模型动态</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKovSkupxf-cs_Qm8hx1iYIrFqXa8Fplpd9S0cHoWtuoRKa_-ZR4NZZ98K6SpNkwmQ8qjfYCkBBi6lDNwogukeZWVEGstzbolPEohuJ4MGRrumASvCOrt8qd6B2LGAts7Z0h5FOkY6vl31K0RmngdIxe_H-sbEe1BTMEbFNeUhMfVaJowbXzrhYgvXUzUCmPtUqcKfzPHykj5f0OK9DLfgmPA..&amp;type=2&amp;query=DeepSeek&amp;token=6E3EBB00A090DF68B7B0E54481C60806B70479146A2A408C" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 11 Ju</div>
+            <div class="ni-title">DeepSeek:花1%的钱,用上同级的AI</div>
+            <div class="ni-summary">开篇DeepSeek V4轻量版,输入每百万词元只要1块钱.你没有看错.1块钱.1百万词元.换算下来,一篇5000字的文章,大模型处理...</div>
+          </a>
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKovSkupxf-cs_Qm8hx1iYIrFqXa8Fplpd9EusvE3mh5xoTZ42i0rEPZHp7Kxd2eHvg_P4oVZRz6w79VqxGujBRGa4yztaBaIiRydfzy6Ia1KuhkEJnvlOfLD-NxB5-kXkt090rZfIkK-31B0vP4-sbwgXVPwls142OEvwfm2Fmxqltrc6IQTRyg3QfvLHcS0CP2OlActSghAfyPfCoem7FzA..&amp;type=2&amp;query=DeepSeek&amp;token=6E3EBB00A090DF68B7B0E54481C60806B70479146A2A408C" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 11 Ju</div>
+            <div class="ni-title">2小时用Deepseek拿下论文初稿,全流程攻略(附超绝指令)</div>
+            <div class="ni-summary">最新整理《deepseek学术论文指令大全(进阶版)》含选题到投稿保姆级指令25页使用手册扫码添加老师直接领取DeepSeek的崛起,...</div>
+          </a>
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKovSkupxf-cs_Qm8hx1iYIrFqXa8Fplpd9yyPkTjXGCXnrNQK6ozH63Hv1Lay50g3AwmYCpbS6QRiKO7nRNJ-778ZMgN0Dp7zzx2chsi0t_oKrETIC3TCjh5zQLcKLr26Ek_3WkhPrWcgFI16DMHNHvbYE59cOaLcUPbDrQ7FaPfUm9viJZAHW8RDam2JBLjNQHtz59dMR2uUO8fIRwtipOg..&amp;type=2&amp;query=DeepSeek&amp;token=6E3EBB00A090DF68B7B0E54481C60806B70479146A2A408C" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 11 Ju</div>
+            <div class="ni-title">用DeepSeek生成历史刷题工具,快速提分</div>
+            <div class="ni-summary">DeepSeek会直接开始写代码,生成一个完整的答题网页.右上角有个运行按钮,可以直接在网页里运行,也可以下载到本地,每次都...</div>
+          </a>
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKovSkupxf-cs_Qm8hx1iYIrFqXa8Fplpd9nhYhf21eH6PmY3tyBy46wN41UDKQSGcl0OQN7n0dvu6nJYGy3hCClJ3MXrRjnT9sXaE7-WIkTXlfV9X6tHahj-0PN2zGbC6Tzy_kdVIdA5-f_uUdbdTsmHatuAbn7wbBaWQDhFQ_8KdAkGakben7BOqXUGLAM44nDN211U5ef84tPujwwRB2Pw..&amp;type=2&amp;query=DeepSeek&amp;token=6E3EBB00A090DF68B7B0E54481C60806B70479146A2A408C" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 11 Ju</div>
+            <div class="ni-title">DeepSeek-V3.2 vs GPT-5.2 全面对照:同接一步API,开源与闭源该怎么选?</div>
+            <div class="ni-summary">核心差异集中在性能、成本与灵活性——GPT-5.2主打高端场景精度,DeepSeek-V3.2胜在高性价比与可定制性,按需选型即可精准匹...</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #E63946">
+          <div class="lab-info">
+            <span class="lab-flag">🇨🇳</span>
+            <div>
+              <b>量子位精选</b>
+              <span class="lab-org">量子位 AI</span>
+            </div>
+          </div>
+          <span class="lab-focus">AI 产业 · 融资 · 模型发布</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKov_zpHHrFgGDQm8hx1iYIrFqXa8Fplpd9jdRsW2JC0FT7TnqIhvAa_rtABJG93ZbRktbCqGlqN8EDhZ1AGu8jtGa5TeA8xp31BCkOxtPpq4UJQKOr7Dx7en9U1G6lDSrFecTixOxJcXAhZAl9eoeJq9SnjYEiWVDJmD43UlP74vlSUTjfyk8nV6eMh8LI7-E945QTWANJOjFCy6umSSPEsg..&amp;type=2&amp;query=QbitAI&amp;token=6E3A5EA622145CEB343267C01836920334A8BE9C6A2A3FCD" target="_blank" rel="noopener">
+            <div class="ni-date">Mon, 17 Ma</div>
+            <div class="ni-title">盖茨被逐出微软董事会真相曝光:长期跟员工搞地下情,27年婚姻中出轨不断,人设已崩</div>
+            <div class="ni-summary">梦晨 鱼羊 发自 凹非寺 量子位 报道 | 公众号 QbitAI2020年3月,在比尔·盖茨辞去微软董事会职务的时候,人们都在感慨一代互联网大...</div>
+          </a>
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKov_zpHHrFgGDQm8hx1iYIrFqXa8Fplpd9jdRsW2JC0FT7TnqIhvAa_rtABJG93ZbRktbCqGlqN8EDhZ1AGu8jtOlnzMxqy5Ov0oTrl3NySJN4JHHuetnFG9jQXzxWbN59Ik5MHzq_bf-M6xRmb3y_E73cbuY2tUVrekxYnJBffdGHcjhU1Ou1mks9ezlPDj-83-aFm3zM_81S6t2rFt2rnA..&amp;type=2&amp;query=QbitAI&amp;token=6E3A5EA622145CEB343267C01836920334A8BE9C6A2A3FCD" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 03 Oc</div>
+            <div class="ni-title">华为手机再遭谷歌釜底抽薪:Mate 30系列变通路径被封死,网友后装也不能用</div>
+            <div class="ni-summary">鱼羊 乾明 发自 凹非寺 量子位 报道 | 公众号 QbitAI华为手机,更艰难的时刻来了.最新消息,那个“曲线救国”——能为华为Mate 30...</div>
+          </a>
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKov_zpHHrFgGDQm8hx1iYIrFqXa8Fplpd9jdRsW2JC0FT7TnqIhvAa_rtABJG93ZbRktbCqGlqN8EDhZ1AGu8jtDln2-SK8EQbDy9nMeKUDCRVoYGLTqRN8enJTzGVVk_hBs0kp4mmRzcHE3bCJYh4G1c8gvG1zL93Ai6lcNj42U198UOVUBouY_5n_L3hbjluMFysDGb5KNCAFV_3u-a3OQ..&amp;type=2&amp;query=QbitAI&amp;token=6E3A5EA622145CEB343267C01836920334A8BE9C6A2A3FCD" target="_blank" rel="noopener">
+            <div class="ni-date">Sun, 29 Se</div>
+            <div class="ni-title">马斯克推出史上最强宇宙飞船!2个月内试飞,可载100人长期星际旅行,还发布火星城市构想</div>
+            <div class="ni-summary">边策 鱼羊 乾明 发自 凹非寺 量子位 报道 | 公众号 QbitAI硅谷钢铁侠,敢想更敢上——这不,火星移民计划现在更加具体可实现.一系列...</div>
+          </a>
+          <a class="news-item" href="https://weixin.sogou.com/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS-Ca30eJ9oKov_zpHHrFgGDQm8hx1iYIrFqXa8Fplpd9jdRsW2JC0FT7TnqIhvAa_rtABJG93ZbRktbCqGlqN8EDhZ1AGu8jtGJw_jTUM_7u9ecxNUGlsLB3r6ZR1ojfwsB7xqXLLUQR3nWAeM8cujE4Jl4vWjoEL6msPAF4_juq746XCukm_T5XVidu3vzO-mzMbG7dGcYayT7fs2v2x772CsG6-xMgzQ..&amp;type=2&amp;query=QbitAI&amp;token=6E3A5EA622145CEB343267C01836920334A8BE9C6A2A3FCD" target="_blank" rel="noopener">
+            <div class="ni-date">Mon, 20 Ma</div>
+            <div class="ni-title">华为突遭谷歌釜底抽薪!官方安卓不再支持华为手机</div>
+            <div class="ni-summary">雷刚 晓查 发自 凹非寺 量子位 报道 | 公众号 QbitAI不好的消息一个接一个,局面只会更加残酷.最新的一个是:使用安卓系统的华为手...</div>
+          </a>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- 全球实验室动态 (RSS) -->
+<section id="lab-news">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">🌍 Global Lab Updates</span>
+      <h2>全球实验室动态</h2>
+      <div class="en">Live RSS · BAIR · MIT · Stanford · DeepMind · OpenAI · NVIDIA</div>
+      <p>来自全球顶尖 AI 机构官方博客与新闻的最新内容，自动抓取更新</p>
+    </div>
+    
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #003262">
+          <div class="lab-info">
+            <span class="lab-flag">🇺🇸</span>
+            <div>
+              <b>BAIR Blog</b>
+              <span class="lab-org">UC Berkeley</span>
+            </div>
+          </div>
+          <span class="lab-focus">强化学习 · Agent · 多模态</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="http://bair.berkeley.edu/blog/2026/05/08/adaptive-parallel-reasoning/" target="_blank" rel="noopener">
+            <div class="ni-date">Fri, 08 Ma</div>
+            <div class="ni-title">Adaptive Parallel Reasoning: The Next Paradigm in Efficient Inference Scaling</div>
+            <div class="ni-summary">Overview of adaptive parallel reasoning.
+
+
+What if a reasoning model could decide for itself when to decompose and parallelize independent subtasks, how many concurrent threads to spawn, and how to coord</div>
+          </a>
+          <a class="news-item" href="http://bair.berkeley.edu/blog/2026/04/20/grasp/" target="_blank" rel="noopener">
+            <div class="ni-date">Mon, 20 Ap</div>
+            <div class="ni-title">Gradient-based Planning for World Models at Longer Horizons</div>
+            <div class="ni-summary">GRASP is a new gradient-based planner for learned dynamics (a “world model”) that makes long-horizon planning practical by (1) lifting the trajectory into virtual states so optimization is paralle</div>
+          </a>
+          <a class="news-item" href="http://bair.berkeley.edu/blog/2026/03/13/spex/" target="_blank" rel="noopener">
+            <div class="ni-date">Fri, 13 Ma</div>
+            <div class="ni-title">Identifying Interactions at Scale for LLMs</div>
+            <div class="ni-summary">--&gt;
+
+
+
+
+
+Understanding the behavior of complex machine learning systems, particularly Large Language Models (LLMs), is a critical challenge in modern artificial intelligence. Interpretability research aims</div>
+          </a>
+          <a class="news-item" href="http://bair.berkeley.edu/blog/2026/01/10/information-driven-imaging/" target="_blank" rel="noopener">
+            <div class="ni-date">Sat, 10 Ja</div>
+            <div class="ni-title">Information-Driven Design of Imaging Systems</div>
+            <div class="ni-summary">An encoder (optical system) maps objects to noiseless images, which noise corrupts into measurements. Our information estimator uses only these noisy measurements and a noise model to quantify how well</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #4285F4">
+          <div class="lab-info">
+            <span class="lab-flag">🇬🇧</span>
+            <div>
+              <b>DeepMind Blog</b>
+              <span class="lab-org">Google DeepMind</span>
+            </div>
+          </div>
+          <span class="lab-focus">科学发现 · 棋类 · 蛋白质 · 强化学习</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/" target="_blank" rel="noopener">
+            <div class="ni-date">Wed, 10 Ju</div>
+            <div class="ni-title">DiffusionGemma: 4x faster text generation</div>
+            <div class="ni-summary"></div>
+          </a>
+          <a class="news-item" href="https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate/" target="_blank" rel="noopener">
+            <div class="ni-date">Tue, 09 Ju</div>
+            <div class="ni-title">Fluid, natural voice translation with Gemini 3.5 Live Translate</div>
+            <div class="ni-summary">Gemini 3.5 Live Translate brings near real-time, natural speech translation to Google AI Studio, Google Translate and Google Meet.</div>
+          </a>
+          <a class="news-item" href="https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model/" target="_blank" rel="noopener">
+            <div class="ni-date">Tue, 09 Ju</div>
+            <div class="ni-title">Introducing Gemma 4 12B: a unified, encoder-free multimodal model</div>
+            <div class="ni-summary"></div>
+          </a>
+          <a class="news-item" href="https://deepmind.google/blog/powering-the-future-of-robotics-in-europe/" target="_blank" rel="noopener">
+            <div class="ni-date">Tue, 09 Ju</div>
+            <div class="ni-title">Powering the future of robotics in Europe</div>
+            <div class="ni-summary"></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #34A853">
+          <div class="lab-info">
+            <span class="lab-flag">🇺🇸</span>
+            <div>
+              <b>Google Research Blog</b>
+              <span class="lab-org">Google Research</span>
+            </div>
+          </div>
+          <span class="lab-focus">基础研究 · 语言 · 视觉 · 系统</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="http://blog.research.google/2024/03/generative-ai-to-quantify-uncertainty.html" target="_blank" rel="noopener">
+            <div class="ni-date">2024-03-29</div>
+            <div class="ni-title">Generative AI to quantify uncertainty in weather forecasting</div>
+            <div class="ni-summary">Posted by Lizao (Larry) Li, Software Engineer, and Rob Carver, Research Scientist, Google Research
+
+
+
+
+Accurate weather forecasts can have a direct impact on people’s lives, from helping make routine decisions, like what</div>
+          </a>
+          <a class="news-item" href="http://blog.research.google/2024/03/autobnn-probabilistic-time-series.html" target="_blank" rel="noopener">
+            <div class="ni-date">2024-03-28</div>
+            <div class="ni-title">AutoBNN: Probabilistic time series forecasting with compositional bayesian neural networks</div>
+            <div class="ni-summary">Posted by Urs Köster, Software Engineer, Google Research
+
+
+
+
+Time series problems are ubiquitous, from forecasting weather and traffic patterns to understanding economic trends. Bayesian approaches start with an assumpti</div>
+          </a>
+          <a class="news-item" href="http://blog.research.google/2024/03/computer-aided-diagnosis-for-lung.html" target="_blank" rel="noopener">
+            <div class="ni-date">2024-03-20</div>
+            <div class="ni-title">Computer-aided diagnosis for lung cancer screening</div>
+            <div class="ni-summary">Posted by Atilla Kiraly, Software Engineer, and Rory Pilgrim, Product Manager, Google Research 
+
+
+
+
+
+Lung cancer is the leading cause of cancer-related deaths globally with 1.8 million deaths reported in 2020. Late diagn</div>
+          </a>
+          <a class="news-item" href="http://blog.research.google/2024/03/using-ai-to-expand-global-access-to.html" target="_blank" rel="noopener">
+            <div class="ni-date">2024-03-20</div>
+            <div class="ni-title">Using AI to expand global access to reliable flood forecasts</div>
+            <div class="ni-summary">Posted by Yossi Matias, VP Engineering &amp;amp; Research, and Grey Nearing, Research Scientist, Google Research
+
+
+
+
+Floods are the most common natural disaster, and are responsible for roughly $50 billion in annual financia</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #C41230">
+          <div class="lab-info">
+            <span class="lab-flag">🇺🇸</span>
+            <div>
+              <b>CMU ML Blog</b>
+              <span class="lab-org">CMU</span>
+            </div>
+          </div>
+          <span class="lab-focus">机器学习理论 · 应用研究</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://blog.ml.cmu.edu/2026/05/13/teaching-vision-language-models-to-speak-cinema/" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 14 Ma</div>
+            <div class="ni-title">Teaching Vision-Language Models to Speak Cinema</div>
+            <div class="ni-summary">A year of building a video caption pipeline with 100+ professional creators, and what it taught us about scaling supervision instead of models. By Zhiqiu Lin and Chancharik Mitra. Based on our CVPR 2026 work, Building a</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lab-section reveal">
+        <div class="lab-hdr" style="border-left:4px solid #10A37F">
+          <div class="lab-info">
+            <span class="lab-flag">🇺🇸</span>
+            <div>
+              <b>OpenAI Research</b>
+              <span class="lab-org">OpenAI</span>
+            </div>
+          </div>
+          <span class="lab-focus">GPT · DALL-E · 安全对齐 · 推理</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://openai.com/index/using-codex-to-simulate-black-holes" target="_blank" rel="noopener">
+            <div class="ni-date">Thu, 11 Ju</div>
+            <div class="ni-title">How an astrophysicist uses Codex to help simulate black holes</div>
+            <div class="ni-summary">Discover how astrophysicist Chi-kwan Chan uses Codex to build black hole simulations, helping scientists study extreme physics and test Einstein’s theory of general relativity.</div>
+          </a>
+          <a class="news-item" href="https://openai.com/index/openai-on-oracle-cloud" target="_blank" rel="noopener">
+            <div class="ni-date">Wed, 10 Ju</div>
+            <div class="ni-title">Access OpenAI models and Codex through your Oracle cloud commitment</div>
+            <div class="ni-summary">Access OpenAI models and Codex through Oracle Cloud, using existing commitments to build and deploy AI with enterprise security and governance.</div>
+          </a>
+          <a class="news-item" href="https://openai.com/index/prc-linked-influence-operations-ai-debates" target="_blank" rel="noopener">
+            <div class="ni-date">Wed, 10 Ju</div>
+            <div class="ni-title">PRC-linked influence operations are targeting AI debates in the US</div>
+            <div class="ni-summary">A new report from OpenAI details PRC-linked influence operations using AI to target U.S. tech debates, data center narratives, tariffs, and false claims  about ChatGPT.</div>
+          </a>
+          <a class="news-item" href="https://openai.com/index/lseg" target="_blank" rel="noopener">
+            <div class="ni-date">Wed, 10 Ju</div>
+            <div class="ni-title">From data to decisions: how LSEG is scaling trusted AI</div>
+            <div class="ni-summary">See how LSEG uses OpenAI to scale trusted AI across its global business, accelerating insights, shrinking release cycles, and empowering 4,000 employees.</div>
+          </a>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- arXiv 最新论文 -->
+<section id="arxiv-papers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">arXiv · Latest Papers</span>
+      <h2>顶尖机构近期论文</h2>
+      <div class="en">Recent Papers from Elite Institutions</div>
+      <p>从 arXiv 抓取 cs.LG / cs.AI / cs.CL / cs.CV / cs.RO 分类中顶尖机构的最新论文</p>
+    </div>
+    <p style="color:#64748b;text-align:center">暂无符合条件的论文</p>
+  </div>
+</section>
+
+<!-- Papers With Code 热门趋势 -->
+<section id="trending-papers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag">Papers With Code · Trending</span>
+      <h2>近期热门论文榜</h2>
+      <div class="en">Trending ML Papers with Code</div>
+      <p>来自 Papers With Code 的热门机器学习论文（按 Star 数排序，均附开源代码）</p>
+    </div>
+    <div class="pwc-grid">
+      <p style="color:#64748b;text-align:center">暂无数据</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <img src="assets/logo.png" alt="长风泰富">
+          <div><b>长风泰富</b><span>CHANGFENG TAIFU TECHNOLOGY</span></div>
+        </div>
+        <p class="foot-c">长风全域感知智算中心 —— 以智算为基础，让 AI 开启未来。<br>北京长风泰富科技有限公司</p>
+      </div>
+      <div class="foot-links">
+        <h5>导航</h5>
+        <a href="index.html#about">关于我们</a>
+        <a href="index.html#services">核心业务</a>
+        <a href="index.html#infra">智算基础设施</a>
+        <a href="index.html#contact">联系我们</a>
+      </div>
+      <div class="foot-links">
+        <h5>内容页面</h5>
+        <a href="news.html">AI 资讯</a>
+        <a href="research.html">科研动态</a>
+        <a href="careers.html">加入我们</a>
+      </div>
+      <div class="foot-links">
+        <h5>合规</h5>
+        <a href="privacy.html">隐私政策</a>
+        <a href="sitemap.xml">网站地图</a>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">工信部备案查询</a>
+      </div>
+      <div class="foot-links">
+        <h5>联系</h5>
+        <a href="tel:+8613910027796">+86 139 1002 7796</a>
+        <a href="mailto:hhmmpp74@outlook.com">hhmmpp74@outlook.com</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 北京长风泰富科技有限公司 · 版权所有</span>
+      <span style="display:flex;gap:12px;flex-wrap:wrap">
+        <span>统一社会信用代码：91110102MA0HLFYLOT</span>
+        <span>·</span>
+        <a href="https://www.gsxt.gov.cn" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px dashed rgba(148,163,184,.6)">工商信息公示</a>
+        <span>·</span>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px dashed rgba(148,163,184,.6)">京ICP备 — 待备案后填写</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>30));
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.onclick=()=>menu.classList.toggle('open');
+menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  el.style.transitionDelay=(i%4*0.07)+'s';io.observe(el)
+});
+</script>
+</body>
+</html>

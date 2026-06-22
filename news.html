@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 前沿资讯 · 长风全域感知智算中心</title>
+<meta name="description" content="长风泰富 AI 前沿资讯 —— 汇聚 NVIDIA 英伟达、Anthropic、OpenAI、Google Gemini、xAI Grok 等全球领先 AI 机构的官方动态。">
+<meta name="keywords" content="长风泰富,AI资讯,人工智能动态,智算中心,NVIDIA,OpenAI,Anthropic,Google Gemini,xAI">
+<meta name="author" content="北京长风泰富科技有限公司">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0ea96a">
+<link rel="canonical" href="https://www.changfengtaifu.com/news.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="长风泰富">
+<meta property="og:title" content="AI 前沿资讯 · 长风全域感知智算中心">
+<meta property="og:description" content="汇聚全球领先 AI 机构官方动态，洞察智算时代最新趋势。">
+<meta property="og:url" content="https://www.changfengtaifu.com/news.html">
+<meta property="og:image" content="https://www.changfengtaifu.com/assets/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI 前沿资讯 · 长风全域感知智算中心">
+<meta name="twitter:description" content="汇聚全球领先 AI 机构官方动态，洞察智算时代最新趋势。">
+<meta name="twitter:image" content="https://www.changfengtaifu.com/assets/og-cover.jpg">
+<style>
+:root{
+  --bg:#eef7f3; --bg2:#ffffff; --surface:#ffffff; --surface2:#f2fbf7;
+  --cyan:#0ea5e9; --blue:#0ea96a; --grad:linear-gradient(90deg,#0ea96a,#0ea5e9);
+  --ink:#0e2038; --text:#46586f; --mute:#64748b; --faint:#94a3b8;
+  --line:rgba(20,55,100,.12); --shadow:0 18px 44px rgba(20,50,100,.10);
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.6; overflow-x:hidden;}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.en{font-family:"Helvetica Neue",Arial,sans-serif;letter-spacing:.06em}
+.tag{font-family:"SF Mono","SFMono-Regular",ui-monospace,Menlo,monospace;font-size:13px;letter-spacing:.22em;color:var(--blue);text-transform:uppercase}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:40px;font-size:15px;font-weight:600;transition:.25s;cursor:pointer;border:1px solid transparent}
+.btn-primary{background:var(--grad);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(14,169,106,.30)}
+
+/* NAV */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:42px;height:42px}
+.brand b{font-size:17px;font-weight:700;color:var(--ink)}
+.brand span{display:block;font-size:10px;color:var(--mute);letter-spacing:.14em;font-family:"Helvetica Neue",Arial}
+.navlinks{display:flex;gap:34px;align-items:center}
+.navlinks a{font-size:15px;color:var(--text);transition:.2s;position:relative}
+.navlinks a:hover,.navlinks a.active{color:var(--ink)}
+.navlinks a.active::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:2px;background:var(--grad)}
+.navlinks .btn{padding:9px 20px;font-size:14px}
+.navlinks .btn-primary,.navlinks .btn-primary:hover{color:#fff}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.burger span{width:26px;height:2px;background:var(--ink);transition:.3s}
+
+/* HERO */
+.nhero{padding:150px 0 60px;position:relative;
+  background:radial-gradient(900px 460px at 80% 0%,rgba(14,165,233,.14),transparent 60%),
+             radial-gradient(700px 460px at 5% 60%,rgba(14,169,106,.12),transparent 60%),
+             linear-gradient(180deg,#ffffff,#ecf7f3)}
+.nhero .tag{margin-bottom:18px;display:inline-block}
+.nhero h1{font-size:clamp(30px,5vw,52px);font-weight:800;color:var(--ink);line-height:1.15}
+.nhero p{color:var(--mute);margin-top:16px;font-size:17px;max-width:680px}
+.sources{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.src-pill{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border:1px solid var(--line);border-radius:30px;background:var(--surface);font-size:14px;color:var(--ink);transition:.25s}
+.src-pill:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:var(--shadow)}
+.src-pill i{width:9px;height:9px;border-radius:50%;background:var(--grad);display:inline-block}
+
+/* FEED */
+.feed{padding:80px 0 40px}
+.brandblock{margin-bottom:64px}
+.bb-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  padding-bottom:16px;border-bottom:2px solid var(--line);margin-bottom:30px}
+.bb-head .left{display:flex;align-items:baseline;gap:14px}
+.bb-head h2{font-size:26px;color:var(--ink);font-weight:800}
+.bb-head .src{font-size:13px;color:var(--faint);font-family:"Helvetica Neue",Arial;letter-spacing:.05em}
+.bb-head .more{font-size:14px;color:var(--blue);font-weight:600}
+.bb-head .more:hover{text-decoration:underline}
+.arts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.art{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 26px;
+  box-shadow:var(--shadow);transition:.3s;display:flex;flex-direction:column}
+.art:hover{transform:translateY(-6px);border-color:rgba(14,169,106,.4);box-shadow:0 24px 50px rgba(20,50,100,.15)}
+.art .date{font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.12em;color:var(--cyan);margin-bottom:12px}
+.art h3{font-size:19px;color:var(--ink);line-height:1.4;margin-bottom:10px}
+.art p{font-size:14.5px;color:var(--mute);flex:1}
+.art .read{margin-top:18px;font-size:14px;color:var(--blue);font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.art .read:hover{gap:10px}
+
+/* DISCLAIMER + FOOTER */
+.note{background:var(--surface2);border:1px solid var(--line);border-radius:16px;padding:24px 28px;margin:30px 0 0;color:var(--mute);font-size:13.5px;line-height:1.8}
+.note b{color:var(--ink)}
+footer{background:#e8f4ee;border-top:1px solid var(--line);padding:50px 0 30px;margin-top:70px}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;align-items:flex-start}
+.foot-brand{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.foot-brand img{width:46px;height:46px}.foot-brand b{font-size:18px;color:var(--ink)}
+.foot-brand span{display:block;font-size:11px;color:var(--faint);letter-spacing:.12em}
+.foot-c{color:var(--text);font-size:14px;max-width:420px}
+.foot-links h5{font-size:14px;color:var(--blue);letter-spacing:.1em;margin-bottom:14px}
+.foot-links a{display:block;color:var(--mute);font-size:14px;margin-bottom:10px;transition:.2s}
+.foot-links a:hover{color:var(--ink)}
+.copy{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--faint);font-size:13px}
+
+@media(max-width:900px){
+  .arts{grid-template-columns:1fr}
+  .navlinks{position:fixed;top:74px;right:0;height:calc(100vh - 74px);width:74%;max-width:320px;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);flex-direction:column;gap:0;padding:20px 0;transform:translateX(100%);transition:.35s;border-left:1px solid var(--line)}
+  .navlinks.open{transform:none}
+  .navlinks a{width:100%;padding:18px 30px;font-size:17px;border-bottom:1px solid var(--line)}
+  .navlinks .btn{margin:18px 30px}
+  .burger{display:flex}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html#home">
+        <img src="assets/logo.png" alt="长风泰富">
+        <div><b>长风泰富</b><span class="en">CHANGFENG TAIFU</span></div>
+      </a>
+      <div class="navlinks" id="menu">
+        <a href="index.html#about">关于我们</a>
+        <a href="index.html#services">核心业务</a>
+        <a href="index.html#infra">智算基础设施</a>
+        <a href="news.html" class="active">AI 资讯</a>
+        <a href="research.html">科研动态</a>
+        <a href="careers.html">加入我们</a>
+        <a href="index.html#contact" class="btn btn-primary">联系我们</a>
+      </div>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<section class="nhero">
+  <div class="wrap">
+    <span class="tag">AI Frontier · News Digest</span>
+    <h1>AI <span class="grad-text">前沿资讯</span></h1>
+    <p>汇聚全球领先 AI 机构的官方动态，洞察智算时代最新趋势。以下内容来源于各机构官方发布，点击「阅读原文」直达来源。</p>
+    <div class="sources">
+      <a class="src-pill" href="https://nvidianews.nvidia.com/" target="_blank" rel="noopener"><i></i>NVIDIA Newsroom</a>
+      <a class="src-pill" href="https://www.anthropic.com/news" target="_blank" rel="noopener"><i></i>Anthropic Newsroom</a>
+      <a class="src-pill" href="https://openai.com/news/" target="_blank" rel="noopener"><i></i>OpenAI News</a>
+      <a class="src-pill" href="https://blog.google/innovation-and-ai/" target="_blank" rel="noopener"><i></i>Google AI Blog</a>
+      <a class="src-pill" href="https://x.ai/news" target="_blank" rel="noopener"><i></i>xAI News</a>
+    </div>
+  </div>
+</section>
+
+<section class="feed">
+  <div class="wrap">
+
+    <!-- NVIDIA -->
+    <div class="brandblock">
+      <div class="bb-head">
+        <div class="left"><h2>NVIDIA · 英伟达</h2><span class="src">GPU 算力 · nvidia.com</span></div>
+        <a class="more" href="https://nvidianews.nvidia.com/" target="_blank" rel="noopener">全部动态 →</a>
+      </div>
+      <div class="arts">
+        <div class="art">
+          <div class="date">GTC 2026 · 芯片</div>
+          <h3>Blackwell 平台发布，开启计算新纪元</h3>
+          <p>英伟达推出 Blackwell 平台，可在万亿参数大模型上运行实时生成式 AI，成本与能耗较上一代最高降低 25 倍；GPU 架构集成六项加速计算关键技术，赋能数据处理、工程仿真、药物设计与生成式 AI。</p>
+          <a class="read" href="https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+        <div class="art">
+          <div class="date">GTC 2026 · 超级芯片</div>
+          <h3>GB200 Grace Blackwell 超级芯片</h3>
+          <p>GB200 超级芯片以 900GB/s NVLink 连接两块 B200 GPU 与 Grace CPU；GB200 NVL72 集成 36 颗超级芯片（含 72 块 Blackwell GPU）。AWS、谷歌、微软、OpenAI、特斯拉、xAI 等将率先采用。</p>
+          <a class="read" href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+        <div class="art">
+          <div class="date">2026 · 超算</div>
+          <h3>携手 Oracle 为美国能源部建最大 AI 超算</h3>
+          <p>英伟达与甲骨文合作，为美国能源部打造其规模最大的 AI 超级计算机；其中 Solstice 系统将搭载创纪录的 10 万块 NVIDIA Blackwell GPU，用于科学探索。</p>
+          <a class="read" href="https://nvidianews.nvidia.com/news/nvidia-oracle-us-department-of-energy-ai-supercomputer-scientific-discovery" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Anthropic -->
+    <div class="brandblock">
+      <div class="bb-head">
+        <div class="left"><h2>Anthropic</h2><span class="src">Claude · anthropic.com</span></div>
+        <a class="more" href="https://www.anthropic.com/news" target="_blank" rel="noopener">全部动态 →</a>
+      </div>
+      <div class="arts">
+        <div class="art">
+          <div class="date">2026 · 新模型</div>
+          <h3>Claude Opus 4.7 发布</h3>
+          <p>Anthropic 推出新一代旗舰模型 Claude Opus 4.7，已在全线产品与 API 上线，定价与 Opus 4.6 持平（输入 $5 / 输出 $25 每百万 token）。</p>
+          <a class="read" href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+        <div class="art">
+          <div class="date">2026.06.02 · 安全</div>
+          <h3>Project Glasswing 扩展至约 150 家新机构</h3>
+          <p>在与安全行业、开源维护者及美国政府合作的基础上，Anthropic 将 Project Glasswing 网络安全防护计划扩展至约 150 家新组织。</p>
+          <a class="read" href="https://www.anthropic.com/news/expanding-project-glasswing" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+        <div class="art">
+          <div class="date">2026.06.01 · 公司</div>
+          <h3>向 SEC 机密提交 S-1 招股文件</h3>
+          <p>Anthropic 宣布已就拟议的首次公开发行（IPO）向美国证券交易委员会机密提交 Form S-1 注册声明草案。</p>
+          <a class="read" href="https://www.anthropic.com/news/confidential-draft-s1-sec" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OpenAI -->
+    <div class="brandblock">
+      <div class="bb-head">
+        <div class="left"><h2>OpenAI</h2><span class="src">ChatGPT · openai.com</span></div>
+        <a class="more" href="https://openai.com/news/" target="_blank" rel="noopener">全部动态 →</a>
+      </div>
+      <div class="arts">
+        <div class="art">
+          <div class="date">2026 · 新模型</div>
+          <h3>GPT-5.5 发布</h3>
+          <p>OpenAI 推出迄今最强模型 GPT-5.5，更快、更强，面向编程、研究与跨工具数据分析等复杂任务。</p>
+          <a class="read" href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+        <div class="art">
+          <div class="date">2026.06.08 · 战略</div>
+          <h3>Built to benefit everyone：发展计划</h3>
+          <p>OpenAI 发布最新发展规划，并启动 OpenAI 经济研究交流（Economic Research Exchange），同步推出 ChatGPT 记忆能力升级。</p>
+          <a class="read" href="https://openai.com/index/built-to-benefit-everyone-our-plan/" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+        <div class="art">
+          <div class="date">2026 · 企业</div>
+          <h3>成立 OpenAI Deployment Company</h3>
+          <p>OpenAI 设立部署公司，通过前沿部署工程师入驻，帮助组织围绕智能能力进行落地与构建。</p>
+          <a class="read" href="https://openai.com/index/openai-launches-the-deployment-company/" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Gemini -->
+    <div class="brandblock">
+      <div class="bb-head">
+        <div class="left"><h2>Google Gemini</h2><span class="src">Gemini · blog.google</span></div>
+        <a class="more" href="https://blog.google/innovation-and-ai/" target="_blank" rel="noopener">全部动态 →</a>
+      </div>
+      <div class="arts">
+        <div class="art">
+          <div class="date">Google I/O 2026</div>
+          <h3>Gemini 3.5 与 Gemini Omni 登场</h3>
+          <p>Google 正式进入「智能体 Gemini 时代」：Gemini 3.5 为智能体与编程提供前沿智能，Gemini Omni 可由任意输入生成内容（首发视频）。</p>
+          <a class="read" href="https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+        <div class="art">
+          <div class="date">2026 · 模型</div>
+          <h3>Gemini 3.5 Flash 发布</h3>
+          <p>Gemini 3.5 Flash 兼具前沿智能与执行力，在 Terminal-Bench 2.1、GDPval-AA、MCP Atlas 等编程与智能体基准上表现领先。</p>
+          <a class="read" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+        <div class="art">
+          <div class="date">2026.05 · 月报</div>
+          <h3>5 月 AI 进展汇总</h3>
+          <p>Google 汇总 2026 年 5 月的最新 AI 动态，覆盖 Gemini 应用、模型与行业落地的多项更新。</p>
+          <a class="read" href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- xAI Grok -->
+    <div class="brandblock">
+      <div class="bb-head">
+        <div class="left"><h2>xAI · Grok</h2><span class="src">Grok · x.ai</span></div>
+        <a class="more" href="https://x.ai/news" target="_blank" rel="noopener">全部动态 →</a>
+      </div>
+      <div class="arts">
+        <div class="art">
+          <div class="date">2026 · 模型</div>
+          <h3>Grok 4.1 全量上线</h3>
+          <p>Grok 4.1 已面向 grok.com、𝕏 以及 iOS / Android 应用的全部用户开放。</p>
+          <a class="read" href="https://x.ai/news" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+        <div class="art">
+          <div class="date">2026.06.03 · 语音</div>
+          <h3>Grok 成为 Vapi 默认语音引擎</h3>
+          <p>xAI 与 Vapi 达成合作，Grok 为 Vapi 的 12 个核心语音提供支持，服务平台上 250 万+ 语音智能体。</p>
+          <a class="read" href="https://x.ai/news/grok-vapi" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+        <div class="art">
+          <div class="date">2026 · 多模态</div>
+          <h3>Grok Imagine API 开放</h3>
+          <p>xAI 推出 Grok Imagine API，提供高质量、低延迟、高性价比的图像与视频生成能力。</p>
+          <a class="read" href="https://x.ai/news/grok-imagine-api" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>资讯来源与版权说明：</b>本页为「AI 前沿资讯」导读，所有内容均整理自 NVIDIA、Anthropic、OpenAI、Google、xAI 等机构的<b>官方公开发布</b>，版权归各原始来源所有；标题与摘要为便于阅读所作的中文概述，点击「阅读原文」可直达官方页面。如需<b>全文转载</b>，请先确认并遵循各来源的版权与转载条款。本页仅供行业信息参考，不构成任何投资或商业建议。
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <img src="assets/logo.png" alt="长风泰富">
+          <div><b>长风泰富</b><span class="en">CHANGFENG TAIFU TECHNOLOGY</span></div>
+        </div>
+        <p class="foot-c">长风全域感知智算中心 —— 以智算为基础，让 AI 开启未来。<br>北京长风泰富科技有限公司</p>
+      </div>
+      <div class="foot-links">
+        <h5>导航</h5>
+        <a href="index.html#about">关于我们</a>
+        <a href="index.html#services">核心业务</a>
+        <a href="index.html#infra">智算基础设施</a>
+        <a href="news.html">AI 资讯</a>
+        <a href="research.html">科研动态</a>
+        <a href="careers.html">加入我们</a>
+        <a href="index.html#contact">联系我们</a>
+      </div>
+      <div class="foot-links">
+        <h5>合规</h5>
+        <a href="privacy.html">隐私政策</a>
+        <a href="sitemap.xml">网站地图</a>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">工信部备案查询</a>
+      </div>
+      <div class="foot-links">
+        <h5>联系</h5>
+        <a href="tel:+8613910027796">+86 139 1002 7796</a>
+        <a href="mailto:hhmmpp74@outlook.com">hhmmpp74@outlook.com</a>
+        <a href="index.html#contact">北京 · 马连道25号院12号楼1208（中基大厦）</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 北京长风泰富科技有限公司 · 版权所有</span>
+      <span style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <span>统一社会信用代码：91110102MA0HLFYLOT</span>
+        <span>·</span>
+        <a href="https://www.gsxt.gov.cn" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px dashed rgba(148,163,184,.6)">工商信息公示</a>
+        <span>·</span>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" class="en" style="color:inherit;border-bottom:1px dashed rgba(148,163,184,.6)">京ICP备 — 待备案后填写</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.onclick=()=>menu.classList.toggle('open');
+menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
+</script>
+</body>
+</html>
