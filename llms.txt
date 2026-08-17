@@ -1,0 +1,31 @@
+# 北京长风泰富科技有限公司（长风泰富 / CHANGFENG TAIFU TECHNOLOGY）
+
+> 北京长风泰富科技有限公司运营长风全域感知智算中心，提供 AI 算力服务、智算基础设施建设与运营。公司依托清洁能源资源优势建设长风泰富（新疆）智算中心，打造绿色、低碳、可持续的绿色算力基地。核心能力涵盖全域感知、智能调度、绿色低碳与安全合规四个方向。
+
+## 关于公司
+
+- 公司全称：北京长风泰富科技有限公司
+- 统一社会信用代码：91110102MA0HLFYLOT
+- 所在地：北京市西城区
+- 联系邮箱：01@changfengtaifu.com
+- 官方网站：https://www.changfengtaifu.com/
+
+## 核心业务
+
+- 智算基础设施建设与运营（建设 · 算力 · 运营 · 方案全链条）
+- AI 算力服务与算力资源弹性供给
+- 全域感知：多源数据实时接入与态势感知
+- 智能调度：算力资源动态编排与弹性分配
+- 绿色低碳：清洁能源驱动，优化 PUE 能效
+- 长风泰富（新疆）智算中心：清洁能源 · 绿色算力基地
+
+## 主要页面
+
+- [长风全域感知智算中心](https://www.changfengtaifu.com/): 公司主页，介绍核心业务、智算基础设施、企业优势与联系方式。
+- [AI 前沿资讯](https://www.changfengtaifu.com/news.html): 汇聚 NVIDIA、Anthropic、OpenAI、Google Gemini、xAI Grok、阿里千问 Qwen、DeepSeek 等国内外 AI 前沿动态。
+- [全球科研动态](https://www.changfengtaifu.com/research.html): 追踪全球顶尖高校与 AI 实验室的最新研究动态、论文与方向。
+- [加入我们](https://www.changfengtaifu.com/careers.html): 面向在校学生与青年人才的智算时代成长平台，提供真实算力资源与前沿研究方向。
+
+## 可选
+
+- [隐私政策](https://www.changfengtaifu.com/privacy.html): 官网隐私政策，说明联系与招聘等场景下的信息处理方式。

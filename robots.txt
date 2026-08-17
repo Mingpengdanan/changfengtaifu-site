@@ -1,4 +1,23 @@
 User-agent: *
 Allow: /
 
+# 显式放行 AI 检索/引用爬虫（含国内引擎），确保内容可被 AI 答案引用
+User-agent: Bytespider
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
 Sitemap: https://www.changfengtaifu.com/sitemap.xml
